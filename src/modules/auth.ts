@@ -46,7 +46,7 @@ export const protect = (req, res, next) => {
     } catch (e) {
         console.error(e);
         res.status(401);
-        res.send("Not authorized");
+        res.json({message:"token not valid"});
         return;
     }
 };

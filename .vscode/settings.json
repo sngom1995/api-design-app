@@ -1,3 +1,15 @@
 {
-    "typescript.format.insertSpaceAfterTypeAssertion": true
+    "typescript.format.insertSpaceAfterTypeAssertion": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true,
+    "prettier.vueIndentScriptAndStyle": true,
+    "editor.formatOnSave": true,
+    "WillLuke.nextjs.addTypesOnSave": true,
+    "dart.flutterGenerateLocalizationsOnSave": "all",
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.preferences.quoteStyle": "auto"
 }

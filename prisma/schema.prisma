@@ -15,19 +15,19 @@ model User {
   createdAt DateTime  @default(now())
   username  String    @unique
   password  String
-  products   Product[]
- // posts      Post[]
+  products  Product[]
+  // posts      Post[]
 }
 
 //model Post {
-  //id        Int      @id @default(autoincrement())
-  //createdAt DateTime @default(now())
- // updatedAt DateTime @updatedAt
-  //title     String   @db.VarChar(255)
-  //content   String?
-  //published Boolean  @default(false)
-  //authorId  String
-  //author    User     @relation(fields: [authorId], references: [id])
+//id        Int      @id @default(autoincrement())
+//createdAt DateTime @default(now())
+// updatedAt DateTime @updatedAt
+//title     String   @db.VarChar(255)
+//content   String?
+//published Boolean  @default(false)
+//authorId  String
+//author    User     @relation(fields: [authorId], references: [id])
 //}
 
 model Product {
@@ -36,7 +36,9 @@ model Product {
   name        String   @db.VarChar(250)
   belongsToId String
   belongsTo   User     @relation(fields: [belongsToId], references: [id])
-  updates      Update[]
+  updates     Update[]
+
+  @@unique([id, belongsToId])
 }
 
 enum UPDATE_STATUS {
