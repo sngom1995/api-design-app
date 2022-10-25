@@ -3,6 +3,7 @@ import { body, oneOf } from 'express-validator';
 import { validationResult } from 'express-validator/src/validation-result';
 import { handleInputErrors } from './modules/middleware';
 import { updateProduct } from './handlers/product';
+import { getUpdates, deleteUpdate } from './handlers/update';
 import {
 	createProduct,
 	getOneProduct,
@@ -33,7 +34,7 @@ router.delete('/product/:id', deleteProduct);
 /**
  * Update
  */
-router.get('/update', (req, res) => {});
+router.get('/update', getUpdates);
 router.get('/update/:id', (req, res) => {});
 router.put('/update/:id', (req, res) => {});
 router.post(
@@ -45,7 +46,7 @@ router.post(
 	createProduct,
 	(req, res) => {}
 );
-router.delete('/update/:id', (req, res) => {});
+router.delete('/update/:id', deleteUpdate);
 /**
  * Update Point
  */
